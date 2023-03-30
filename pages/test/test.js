@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 
 
 export default function Home() {
-  const subtitle = "サブタイトルーーー";
+  const subtitle = "サブタイトルーーー"
 
   return (
     <div className="hero">
@@ -13,20 +13,5 @@ export default function Home() {
       <hr />
       <p>{subtitle}</p>
     </div>
-  );
-}
-
-export default function Home() {
-  return (
-    <>
-      <header>HEADER</header>
-      <main>
-        <div>
-          <h1>CUBE</h1>
-          <p>アウトプットしてくれるサイト</p>
-        </div>
-      </main>
-      <footer>FOOTER</footer>
-    </>
   );
 }
