@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <Hero
       title="hitto"
-      subtitle="hellohitto"
+      subtitle="サブタイトル"
       imageOn
     />
   )
