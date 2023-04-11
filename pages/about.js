@@ -1,6 +1,7 @@
 import Container from "components/container";
 import Hero from "components/hero";
 import PostBody from "components/post-body";
+import Contact from "components/contact";
 
 export default function About() {
   return (
@@ -16,6 +17,7 @@ export default function About() {
           広い門の下には、この男のほかに誰もいない。ただ、所々丹塗の剥げた、大きな円柱に、蟋蟀が一匹とまっている。羅生門が、朱雀大路にある以上は、この男のほかにも、雨やみをする市女笠や揉烏帽子が、もう二三人はありそうなものである。それが、この男のほかには誰もいない。
         </p>
       </PostBody>
+      <Contact />
     </Container>
   );
 }
