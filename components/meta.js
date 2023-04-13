@@ -5,8 +5,10 @@ import { useRouter } from "next/router";
 import { siteMeta } from "lib/constants";
 const { siteTitle, siteDesc, siteUrl, siteLocale, siteType, siteIcon } =
   siteMeta;
+// 汎用 OGP 画像
+import siteImg from 'images/ogp.jpg'
 
-export default function Meta({ pageTitle, pageDesc }) {
+export default function Meta({ pageTitle, pageDesc, pageImg, pageImgW, pageImgH }) {
   // タイトル
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle;
   // 説明
@@ -14,6 +16,12 @@ export default function Meta({ pageTitle, pageDesc }) {
   // URL
   const router = useRouter();
   const url = `${siteUrl}${router.asPath}`;
+  // OGP 画像
+  const img = pageImg || siteImg.src;
+  const imgW = pageImgW || siteImg.width;
+  const imgH = pageImgH || siteImg.height;
+  const imgUrl = img.startsWith('https') ? img : `${siteUrl}${img}`;
+
   return (
     <Head>
       <title>{title}</title>
@@ -31,6 +39,11 @@ export default function Meta({ pageTitle, pageDesc }) {
 
       <link rel="icon" href={siteIcon} />
       <link rel="apple-touch-icon" href={siteIcon} />
+
+      <meta property="og:image" content={imgUrl} />
+      <meta property="og:image:width" content={imgW} />
+      <meta property="og:image:height" content={imgH} />
+      <meta name="twitter:card" content="summary_large_image" />
     </Head>
   );
 }
