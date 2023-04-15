@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ここ
 
-​[url](blog-hitto-hub.vercel.app)
+​[url](https://blog-hitto-hub.vercel.app)
 
 ## Getting Started
 
